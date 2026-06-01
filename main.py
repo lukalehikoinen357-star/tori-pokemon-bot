@@ -55,7 +55,8 @@ def check_tori():
                 
                 # Fallback title if element selector changes
                 if title == "New Pokémon Listing" and item.text:
-                    title = item.text.strip().split('\n')[0]
+                    title = item.text.strip().split('\n')[0] if item.text else "New Pokémon Listing"
+
 
                 # Price tracking locator
                 price = "Check site"
